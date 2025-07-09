@@ -10,6 +10,13 @@
       width: 100%;
       background-color: #020617;
       position: relative;
+      color: white; /* Texto blanco */
+      /* padding: 2rem; /* Un poco de espacio para que no quede pegado al borde */
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      text-align: center;
     }
 
     .bg-dark-sphere::before {
@@ -24,11 +31,22 @@
         radial-gradient(circle at 50% 50%, rgba(139,92,246,0.15) 0%, transparent 70%);
       background-size: 32px 32px, 32px 32px, 100% 100%;
     }
+
+    /* Asegura que el contenido esté arriba del fondo */
+    .bg-dark-sphere > * {
+      position: relative;
+      z-index: 1;
+    }
+    h2{
+      display: block;
+      margin: auto;
+    }
   </style>
 </head>
 <body>
   <div class="bg-dark-sphere">
     <h2>Test Git</h2>
+    <!-- Más contenido -->
   </div>
 </body>
 </html>
